@@ -1,0 +1,36 @@
+{
+  "name": "angrybird",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite --host",
+    "dev:server": "vite --host",
+    "dev:runtime": "vite --host",
+    "dev:headless": "iwsdk dev up --no-open --foreground",
+    "dev": "vite --host",
+    "dev:down": "iwsdk dev down",
+    "dev:status": "iwsdk dev status",
+    "reference:status": "iwsdk reference status",
+    "reference:warmup": "iwsdk reference warmup",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@iwsdk/core": "0.5.3",
+    "three": "npm:super-three@0.181.0"
+  },
+  "devDependencies": {
+    "@iwsdk/reference": "0.5.3",
+    "@iwsdk/cli": "0.5.3",
+    "@iwsdk/vite-plugin-dev": "0.5.3",
+    "@meta-quest/metavr": "^1.3.2",
+    "vite": "^7.1.4"
+  },
+  "overrides": {
+    "sharp": "0.35.3"
+  },
+  "engines": {
+    "node": ">=20.19.0 <21.0.0-0 || >=22.12.0 <23.0.0-0 || >=24.0.0"
+  }
+}

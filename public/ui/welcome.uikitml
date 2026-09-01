@@ -1,0 +1,98 @@
+<!--
+  Panel, Divider, Button, ButtonIcon, and ButtonLabel come from the bundled
+  Horizon kit. RectangleGoggles and LogIn are bundled Lucide icon components.
+-->
+<style>
+  @font-face {
+    font-family: "DM Sans";
+    src: url("https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxhTg.ttf");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "DM Sans";
+    src: url("https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAkJxhTg.ttf");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "DM Sans";
+    src: url("https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwARZthTg.ttf");
+    font-weight: 700;
+  }
+
+  .panel-root {
+    flex-direction: column;
+    font-family: "DM Sans";
+    width: 280px;
+  }
+
+  .panel-content {
+    align-items: center;
+    flex-direction: column;
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .heading {
+    height: 32px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    color: #ff3344;
+  }
+
+  .heading:dark {
+    color: #ffea00;
+  }
+
+  .sub-heading {
+    color: #272727;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    width: 100%;
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  .sub-heading:dark {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .button {
+    justify-content: flex-start;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
+
+  .button-label {
+    transform-translate-y: 1px;
+  }
+</style>
+<Panel class="panel-root">
+  <div class="panel-content">
+    <div class="heading">Angry Birds VR</div>
+    <Divider></Divider>
+    <div class="sub-heading">
+      Hand-tracked Slingshot VR
+    </div>
+  </div>
+  <Button id="xr-button" class="button">
+    <ButtonIcon>
+      <RectangleGoggles></RectangleGoggles>
+    </ButtonIcon>
+    <ButtonLabel class="button-label">Enter VR Mode</ButtonLabel>
+  </Button>
+  <Button id="exit-button" class="button" style="display: none">
+    <ButtonIcon>
+      <LogIn></LogIn>
+    </ButtonIcon>
+    <ButtonLabel class="button-label">Exit to Browser</ButtonLabel>
+  </Button>
+</Panel>
